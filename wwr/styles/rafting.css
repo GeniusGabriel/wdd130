@@ -1,7 +1,13 @@
-/* ==========================================================================
-   Global Reset & Page Layout
-   ========================================================================== */
+:root {
+    --primary-color: #396e94;
+    --secondary-color: #2b526f;
+    --accent-color: #d9e2ec;
+    --text-color: #333333;
+}
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--text-color);
     overflow-x: hidden;
     /* Prevents horizontal scrollbars */
 }
@@ -22,7 +28,7 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 10px 20px;
-    background-color: #396e94;
+    background-color: var(--primary-color);
     /* Primary theme color */
 }
 
@@ -93,7 +99,7 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.85);
-    color: #333;
+    color: var(--text-color);
     padding: 15px 25px;
     border-radius: 8px;
     width: 70%;
