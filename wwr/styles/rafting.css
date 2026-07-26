@@ -1,134 +1,212 @@
-:root {
-    --primary-color: #0d47a1;
-    /* Deep River Blue */
-    --secondary-color: #ff9800;
-    /* Life-Jacket Orange / Accent */
-    --accent-color: #26c6da;
-    /* Clear Water Teal */
-    --text-color: #333333;
-    /* Crisp Dark Gray for text */
-    --background-color: #f5f5f5;
-    /* Light gray backdrop */
-    --body-font: "Roboto", Helvetica, Arial, sans-serif;
-    --heading-font: "Georgia", serif;
-}
-
+/* ==========================================================================
+   Global Reset & Page Layout
+   ========================================================================== */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-}
-
-.social-icon {
-    width: 35px;
-    height: auto;
-    margin: 0 10px;
-}
-
-header,
-main,
-footer {
-    max-width: 840px;
-    margin: 0 auto;
-}
-
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* 1. Reset section backgrounds to be clean and transparent */
-section {
-    margin: 2rem 0;
+    margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbars */
 }
 
-/* 2. Style the section headings to look like solid banner stripes */
-section h2 {
-    background-color: var(--primary-color);
-    /* This uses your dark blue variable */
-    color: #ffffff;
-    /* Crisp white text */
-    text-align: center;
-    /* Center the text */
-    padding: 12px;
-    /* Vertical breathing room */
-    margin-bottom: 1rem;
-    /* Space between the banner and the text below it */
-    font-size: 1.3rem;
+/* ==========================================================================
+   1. Header Styling (CSS Grid & Flexbox)
+   ========================================================================== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #396e94;
+    /* Primary theme color */
 }
 
-/* 3. Ensure the text below the banner aligns cleanly */
-section p {
-    padding: 0 16px;
-    /* Gives the body text clean side margins */
-    line-height: 1.6;
+header img {
+    width: 80px;
+    height: auto;
 }
 
-.socialmedia a {
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav a {
     text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
 }
 
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   2. Hero Section (Positioning & Overlays)
+   ========================================================================== */
 .hero {
     position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .hero img {
-    display: block;
     width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: 400px;
+    /* Standard hero height */
+    object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
-    padding: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
     text-align: center;
-    background-color: var(--accent-color);
-    /* 🌟 This uses your teal variable and satisfies the grader! */
-    color: #fff;
-    opacity: 0.85;
-}
-
-nav a:hover {
-    color: var(--secondary-color);
-    /* Uses your orange color when hovering over links */
+    width: 80%;
+    margin: 0;
+    z-index: 2;
 }
 
 .hero article {
     position: absolute;
-    top: 140px;
-    /* Adjusts how far down from the top the box floats */
-    left: 5%;
-    right: 5%;
-    /* Leaves clean 5% margins on both sides */
-    background-color: rgba(230, 180, 50, 0.9);
-    /* Warm overlay backing (or use your orange variable) */
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 8px;
+    width: 70%;
+    text-align: center;
+    z-index: 2;
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
+    width: 100px;
     height: auto;
+    float: right;
     margin-left: 15px;
-    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   3. History Section (3-Column Grid)
+   ========================================================================== */
+.history {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.history img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   4. Adventures Section (5-Column Horizontal Layout)
+   ========================================================================== */
+.adventures {
+    text-align: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.adventures h2 {
+    margin-bottom: 20px;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* Forces all 5 cards into a single row */
+    gap: 12px;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 0;
+    /* Ensures all 5 cards scale equally */
+    min-width: 0;
+    margin: 0;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ==========================================================================
+   5. Footer Styling (Flexbox Alignment & Icon Sizing)
+  /* Footer Container */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #396e94;
+    color: white;
+}
+
+/* Footer Paragraph Text */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Nav Container - Places Social Icons Horizontally */
+footer nav.socialmedia {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Social Icon Image Resizing */
+footer .social-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
