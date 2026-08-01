@@ -187,6 +187,7 @@ nav a:hover {
 /* ==========================================================================
    5. Footer Styling (Flexbox Alignment & Icon Sizing)
   /* Footer Container */
+/* Footer Layout */
 footer {
     display: flex;
     justify-content: space-between;
@@ -196,23 +197,26 @@ footer {
     color: #ffffff;
 }
 
-.social-links {
+/* Force social nav items into a horizontal row */
+.socialmedia {
     display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
     gap: 1.2rem;
     align-items: center;
 }
 
-.social-links a img {
-    width: 28px;
-    height: 28px;
+/* Keep the SVG icons at a neat, fixed size */
+.socialmedia a img {
+    width: 32px;
+    /* Constrains the SVG width */
+    height: 32px;
+    /* Constrains the SVG height */
+    display: block;
     object-fit: contain;
-    transition: transform 0.2s ease;
 }
 
-.social-links a img:hover {
-    transform: scale(1.15);
-    /* Nice subtle hover effect */
-}
+/* Nice subtle hover effect */
 
 /* ===================================================
    W05 CONTACT US PAGE - WIREFRAME SPECIFIC STYLES
