@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- Standard Header -->
+    <!-- Header -->
     <header>
         <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
         <nav>
@@ -24,7 +24,7 @@
     </header>
 
     <main>
-        <!-- Company Information Section -->
+        <!-- Company Information -->
         <section class="company-info">
             <h1>White Water Rafting Company</h1>
             <address>
@@ -36,7 +36,7 @@
             </address>
         </section>
 
-        <!-- Map & Form Layout (Uses divs for pure layout wrappers) -->
+        <!-- Map & Form Container -->
         <div class="map-form-container">
             <div class="map-section">
                 <iframe
@@ -62,17 +62,17 @@
 
                     <fieldset class="purpose-fieldset">
                         <legend>Message Purpose</legend>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="general" checked> General
-                            Inquiry
+                        <label for="purpose-general" class="radio-label">
+                            <input type="radio" id="purpose-general" name="purpose" value="general"
+                              checked> General Inquiry
                         </label>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="reservation"> Reservation
-                            Question
+                        <label for="purpose-reservation" class="radio-label">
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="reservation"> Reservation Question
                         </label>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="suggestion"> Website
-                            Suggestion
+                        <label for="purpose-suggestion" class="radio-label">
+                            <input type="radio" id="purpose-suggestion" name="purpose"
+                              value="suggestion"> Website Suggestion
                         </label>
                     </fieldset>
 
@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <!-- Employees Section (Has h2 heading) -->
+        <!-- Employees Section -->
         <section class="employees-section">
             <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
@@ -114,20 +114,20 @@
         </section>
     </main>
 
-    <!-- Standard Footer -->
+    <!-- Footer using your actual SVG images -->
     <footer>
         <p>&copy; 2026 | White Water Rafting | Gabriel Awushie-Tetteh</p>
-        <div class="social-links">
+        <nav class="socialmedia">
             <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <img src="images/facebook.png" alt="Facebook logo">
+                <img src="images/facebook.svg" alt="Facebook logo">
             </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <img src="images/twitter.png" alt="Twitter logo">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn logo">
             </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <img src="images/instagram.png" alt="Instagram logo">
+            <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp">
+                <img src="images/whatsapp.svg" alt="WhatsApp logo">
             </a>
-        </div>
+        </nav>
     </footer>
 </body>
 
