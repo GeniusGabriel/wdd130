@@ -409,3 +409,31 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Ensure Header/Nav Links are Pure White for High Contrast */
+header nav a {
+    color: #ffffff;
+    /* Pure white text gives 6.1:1+ ratio on blue */
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffeb3b;
+    /* High-visibility yellow on hover */
+}
+
+/* Ensure Footer Text and Links are Pure White */
+footer,
+footer p,
+footer a,
+.socialmedia a {
+    color: #ffffff;
+    /* Pure white on blue gives strong contrast */
+}
+
+/* Ensure Address Email & Phone Links Have High Contrast */
+.company-info address a {
+    color: #000080;
+    /* Deep navy text on white background gives 16:1 ratio */
+    font-weight: bold;
+}
