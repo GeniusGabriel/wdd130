@@ -1,0 +1,170 @@
+/*1. Universal reset selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Step 3: Style the body rule */
+body {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Step 4: Style the header and h1 */
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+h1 {
+    color: #000080;
+    /* Dark blue title matching the assignment target */
+    font-size: 2em;
+}
+
+/* Step 5: Style the form */
+form {
+    width: 600px;
+    max-width: 90%;
+    margin: 0 auto;
+    /* Centers the form horizontally */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    /* Subtle light background */
+    display: grid;
+    gap: 1.5rem;
+    /* Adds clean spacing between form elements */
+}
+
+/* Step 6: Style fieldset to be a grid with a gap */
+fieldset {
+
+    /* Aligns labels and inputs cleanly in two columns */
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+}
+
+/* Step 7: Style fieldset legend */
+legend {
+    color: #000080;
+    /* Matches header blue */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+/* Step 8 & 10: Form element typography, padding, and font size */
+label,
+input,
+button,
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Clean sans-serif font for input readability */
+}
+
+/* Step 9: Align labels to the right with padding-right */
+label {
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 1rem;
+    white-space: normal;
+}
+
+/* Step 10: Spacing and font sizing for inputs, selects, and textareas */
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Optional tweak for textarea to take full row width if spans across columns */
+
+/* 11. Style the checkbox input element */
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+/* 12. Style the button and button:hover pseudo-class */
+button {
+    margin: 1rem auto;
+    padding: 0.8rem 2rem;
+    background-color: #000080;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: #000040;
+}
+
+/* 13. Style the footer */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Step 4.1: Base grid styling for form items */
+.form-item {
+    display: grid;
+    align-items: center;
+    margin: 1rem;
+}
+
+/* Step 4.2: Column 1 layout (3fr for label, 1fr for input) */
+.column1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+}
+
+.column1 label {
+    text-align: right;
+    padding-right: 0;
+}
+
+/* Step 4.3: Column 2 layout (1fr for label, 2fr for input) */
+.column2 {
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/* Stack label on top of textarea and center both */
+.textarea-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.textarea-item label {
+    text-align: center;
+    padding-right: 0;
+}
+
+.textarea-item textarea {
+    width: 100%;
+}
