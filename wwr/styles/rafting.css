@@ -441,3 +441,249 @@ footer a,
     /* Deep navy text on white background gives 16:1 ratio */
     font-weight: bold;
 }
+
+/* --- Requirement 3: Hero Section (Position Absolute Overlay) --- */
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+}
+
+/* --- Requirement 4: Newsletter Form --- */
+.newsletter-section {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    align-self: flex-end;
+    padding: 0.6rem 1.2rem;
+    background-color: #005f73;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- Requirement 5: Call to Action (CTA) --- */
+.cta-section {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: #e0f2f1;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.8rem;
+    background-color: #ca6702;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #bb3e03;
+}
+
+/* --- Requirement 6 & 7: CSS Grid Layout --- */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.grid-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-card h3 {
+    margin: 1rem 0 0.5rem 0;
+    color: #005f73;
+}
+
+.grid-card p {
+    padding: 0 1rem;
+    color: #333;
+}
+
+/* --- Trips Hero & Call to Action --- */
+.trips-cta {
+    text-align: center;
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.trips-cta h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.trips-cta p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* --- Trips Multi-Column Grid Layout --- */
+.trips-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.trips-container h2,
+.table-section h2 {
+    text-align: center;
+    color: #005f73;
+    margin-bottom: 1.5rem;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.trip-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.trip-content h3 {
+    margin-top: 0;
+    color: #0a9396;
+}
+
+.difficulty {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.difficulty.easy {
+    color: #2b9348;
+}
+
+.difficulty.medium {
+    color: #ca6702;
+}
+
+.difficulty.hard {
+    color: #ae2012;
+}
+
+/* --- Trips Comparison Table --- */
+.table-section {
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+}
+
+.trips-table th,
+.trips-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.trips-table th {
+    background-color: #005f73;
+    color: #ffffff;
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.trips-table tbody tr:hover {
+    background-color: #e0f2f1;
+}
